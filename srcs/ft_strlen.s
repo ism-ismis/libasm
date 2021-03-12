@@ -13,11 +13,11 @@
 global _ft_strlen
 section .text
 _ft_strlen:
-	xor rax, rax			;set rax = 0;
+	xor rax, rax
 .loop:
-	cmp	byte[rdi+rax], 0	;if (rdi[rax] == 0)
-	je	.end				; jump to .end
-	inc	rax					;rax++;
-	jmp	.loop				;jump to .loop
+	cmp	byte[rdi+rax], 0
+	je	.end
+	inc	rax	
+	jmp	.loop
 .end:
-	ret						;return rax
+	ret	

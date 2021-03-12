@@ -13,15 +13,15 @@
 global _ft_strcpy
 section .text
 _ft_strcpy:
-	xor	rdx, rdx			;rdx = 0;
-	xor	rcx, rcx			;rcx = 0;
+	xor	rdx, rdx
+	xor	rcx, rcx
 .loop:
-	mov	dl, byte[rsi+rcx]	;dl = rsi[rcx]
-	mov	byte[rdi+rcx], dl	;rdi[rcx] = dl
-	cmp	byte[rsi+rcx], 0	;if (rsi[rcx] == 0)
-	je	.end				;jump to .end
-	inc	rcx					;rcx++;
-	jmp	.loop				;jump to .loop
+	mov	dl, byte[rsi+rcx]
+	mov	byte[rdi+rcx], dl
+	cmp	byte[rsi+rcx], 0
+	je	.end
+	inc	rcx	
+	jmp	.loop
 .end:
-	mov rax, rdi			;rax = rdi
-	ret						;return rax
+	mov rax, rdi
+	ret				
