@@ -5,5 +5,5 @@ Implement some basic functions from C standard library in asm
 install nasm
 
 #### command  
-run command "make" & "make test"
+run command "make" & "make test". 
 then "./test"
